@@ -26,35 +26,36 @@ Instale as dependências com o comando go get.
 Execute o projeto com o comando go run main.go.
 O projeto irá iniciar um servidor HTTP na porta 8080. Você pode enviar solicitações ao servidor usando um navegador da web ou uma ferramenta de teste, como o Postman.
 
+
+## TODO`S:
+* Implementar testes unitários para todos os componentes.
+* Implementar todas operações para todas entidades.
+* Melhorar respostas JSON
+
+Responsáveis:
+
+* [renanmachad](https://github.com/renanmachad/)
+
+
+
 # Exemplos de solicitações
 Aqui estão alguns exemplos de solicitações que você pode enviar ao servidor:
 
-Criar um produto:
-POST /products
+Criar  um pedido:
+
+POST /api/v1/order
 
 Body:
 
 {
-"name": "Product 1",
-"price": 100
+
+"customer_id":1,
+
+"total_amount":23,
+
+"order_status":"PURCHASED"
+
 }
-
-
-* **Atualizar um produto:**
-
-PUT /products/1
-
-Body:
-
-{
-"name": "Product 2",
-"price": 200
-}
-
-
-* **Listar produtos:**
-
-GET /products
 
 
 ## Contribuições
